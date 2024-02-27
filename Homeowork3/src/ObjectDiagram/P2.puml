@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/object-diagram
+
+'object London
+'object Washington
+'object Berlin
+'object NewYork
+'
+'map CapitalCity {
+' UK *-> London
+' USA *--> Washington
+' Germany *---> Berlin
+'}
+'
+'NewYork --> CapitalCity::USA
+
+object "<u>ships[0]</u>" as s1{
+    shipName = "Titanic"
+    yearBuilt = "March31st,1909"
+}
+
+object "<u>ships[1]</u>" as s2{
+    shipName = "MVGemini"
+    yearBuilt = "May30th,1991"
+    maxNumberPassengers = 100
+}
+
+object "<u>ships[2]</u>" as s3{
+  shipName = "EverGiven"
+    yearBuilt = "September25th,2018"
+    cargoCapacityInTonnage = 220940
+}
+
+s1 <|-- s2
+s1 <|-- s3
+
+
+@enduml
